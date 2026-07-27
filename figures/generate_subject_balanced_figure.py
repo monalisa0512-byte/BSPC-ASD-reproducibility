@@ -11,7 +11,11 @@ import matplotlib
 import os
 from common_paths import DATA_DIR, RESULTS_DIR, OUTPUT_DIR as FIGURE_OUTPUT_DIR
 
-matplotlib.rcParams['font.family'] = 'DejaVu Sans'
+matplotlib.rcParams['font.family'] = 'serif'
+matplotlib.rcParams['font.serif'] = ['Times New Roman', 'Times', 'DejaVu Serif']
+matplotlib.rcParams['mathtext.fontset'] = 'stix'
+matplotlib.rcParams['pdf.fonttype'] = 42
+matplotlib.rcParams['svg.fonttype'] = 'none'
 matplotlib.rcParams['font.size'] = 10
 matplotlib.rcParams['axes.labelsize'] = 11
 matplotlib.rcParams['axes.titlesize'] = 12
