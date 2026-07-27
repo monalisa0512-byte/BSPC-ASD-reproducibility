@@ -1,0 +1,2 @@
+comparison,n_subjects,model_a_accuracy,model_b_accuracy,accuracy_delta,model_a_f1,model_b_f1,f1_delta,mcnemar_b,mcnemar_c,mcnemar_p,bootstrap_acc_delta_low,bootstrap_acc_delta_high,bootstrap_acc_delta_p,bootstrap_f1_delta_low,bootstrap_f1_delta_high,bootstrap_f1_delta_p
+AttentionNet vs CNNLSTM,57,0.8596491228070176,0.7894736842105263,0.07017543859649122,0.8518518518518519,0.7777777777777778,0.07407407407407407,6,2,0.2890625,-0.01754385964912286,0.17543859649122806,0.202,-0.026830191172693786,0.18775595159432878,0.171
