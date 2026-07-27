@@ -7,8 +7,17 @@ Shows what physiological events the attention mechanism focuses on.
 import os
 import numpy as np
 import pandas as pd
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 from common_paths import DATA_DIR, RESULTS_DIR, OUTPUT_DIR as FIGURE_OUTPUT_DIR
+
+mpl.rcParams.update({
+    'font.family': 'serif',
+    'font.serif': ['Times New Roman', 'Times', 'DejaVu Serif'],
+    'mathtext.fontset': 'stix',
+    'pdf.fonttype': 42,
+    'svg.fonttype': 'none',
+})
 
 # Paths
 DATA_FILE = str(DATA_DIR / 'labeled_12.csv')
