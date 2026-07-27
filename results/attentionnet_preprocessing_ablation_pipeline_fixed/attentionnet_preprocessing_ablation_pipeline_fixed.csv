@@ -1,0 +1,6 @@
+Experiment,Accuracy,Accuracy_CI_Low,Accuracy_CI_High,F1_Score,F1_CI_Low,F1_CI_High
+Full_Preprocessing,85.96%,77.15%,94.74%,85.19%,73.08%,93.75%
+Linear_Interpolation,80.70%,71.89%,89.47%,78.43%,65.11%,88.90%
+Without_Blink_Expansion,80.70%,70.18%,89.52%,80.70%,68.09%,90.91%
+No_Filtering,63.16%,49.12%,75.44%,67.69%,52.46%,79.49%
+Without_Mask_Features,80.70%,70.18%,89.47%,79.25%,64.69%,89.86%
