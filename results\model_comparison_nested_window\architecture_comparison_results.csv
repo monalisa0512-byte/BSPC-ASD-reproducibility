@@ -1,2 +1,0 @@
-Model,Accuracy,Accuracy_95CI_Low,Accuracy_95CI_High,F1_Score,F1_95CI_Low,F1_95CI_High,Subject_Predictions
-CNNLSTM,82.46%,71.93%,91.23%,82.14%,70.37%,91.53%,results/model_comparison_nested_window/cnnlstm_subject_predictions.csv
