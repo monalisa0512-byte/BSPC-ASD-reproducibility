@@ -1,0 +1,2 @@
+Experiment,Accuracy,Accuracy_CI_Low,Accuracy_CI_High,F1_Score,F1_CI_Low,F1_CI_High
+No_Filtering,63.16%,49.12%,75.44%,67.69%,52.46%,79.49%
