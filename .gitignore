@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.log
+*.pt
+*.pth
+*.ckpt
+data/raw/
+data/eyesdata_processed_57/
+generated_figures/
+.venv/
+.idea/
+.vscode/
+

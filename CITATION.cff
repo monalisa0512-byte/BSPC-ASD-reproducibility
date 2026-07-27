@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this code or the archived result files, please cite the associated manuscript and software release."
+title: "BSPC eye-tracking ASD classification reproducibility package"
+type: software
+version: "1.0.0-review"
+date-released: 2026-07-27
+repository-code: "https://github.com/monalisa0512-byte/BSPC-ASD-reproducibility"
+url: "https://github.com/monalisa0512-byte/BSPC-ASD-reproducibility"
+authors:
+  - family-names: Liu
+    given-names: Zizheng
+    orcid: "https://orcid.org/0009-0000-9152-0228"
+  - family-names: Li
+    given-names: Huiyong
+    orcid: "https://orcid.org/0000-0001-9916-7908"
+  - family-names: Zhao
+    given-names: Na
+    orcid: "https://orcid.org/0000-0002-6166-2118"
+  - family-names: Yang
+    given-names: Wudao
+    orcid: "https://orcid.org/0000-0001-8411-1450"
