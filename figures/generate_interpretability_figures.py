@@ -10,9 +10,18 @@ import os
 import glob
 import numpy as np
 import pandas as pd
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 from scipy import stats
 from common_paths import DATA_DIR as DATA_PATH, RESULTS_DIR, OUTPUT_DIR as FIGURE_OUTPUT_DIR
+
+mpl.rcParams.update({
+    'font.family': 'serif',
+    'font.serif': ['Times New Roman', 'Times', 'DejaVu Serif'],
+    'mathtext.fontset': 'stix',
+    'pdf.fonttype': 42,
+    'svg.fonttype': 'none',
+})
 
 # Optional: t-SNE
 try:
