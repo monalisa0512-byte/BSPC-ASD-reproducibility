@@ -9,9 +9,18 @@ Figures:
 import os
 import numpy as np
 import pandas as pd
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 from scipy import interpolate
 from common_paths import RAW_DIR as RAW_PATH, OUTPUT_DIR as FIGURE_OUTPUT_DIR
+
+mpl.rcParams.update({
+    'font.family': 'serif',
+    'font.serif': ['Times New Roman', 'Times', 'DejaVu Serif'],
+    'mathtext.fontset': 'stix',
+    'pdf.fonttype': 42,
+    'svg.fonttype': 'none',
+})
 
 # Paths
 RAW_DIR = str(RAW_PATH)
