@@ -1,0 +1,2 @@
+Experiment,Accuracy,Accuracy_CI_Low,Accuracy_CI_High,F1_Score,F1_CI_Low,F1_CI_High
+Ablation_No_Mask,80.70%,70.18%,89.47%,79.25%,65.22%,89.66%
