@@ -1,0 +1,2 @@
+Experiment,Accuracy,Accuracy_CI_Low,Accuracy_CI_High,F1_Score,F1_CI_Low,F1_CI_High
+Ablation_No_J_Stat,74.58%,62.71%,84.75%,70.59%,54.55%,83.02%
