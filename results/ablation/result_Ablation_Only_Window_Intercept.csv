@@ -1,0 +1,2 @@
+Experiment,Accuracy,Accuracy_CI_Low,Accuracy_CI_High,F1_Score,F1_CI_Low,F1_CI_High
+Ablation_Only_Window_Intercept,80.70%,70.18%,91.23%,80.70%,66.67%,90.91%
