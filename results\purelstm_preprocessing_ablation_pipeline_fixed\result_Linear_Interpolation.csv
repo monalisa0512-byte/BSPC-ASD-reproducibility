@@ -1,0 +1,2 @@
+Experiment,Accuracy,Accuracy_CI_Low,Accuracy_CI_High,F1_Score,F1_CI_Low,F1_CI_High
+Linear_Interpolation,78.95%,68.42%,89.47%,77.78%,63.16%,88.89%
