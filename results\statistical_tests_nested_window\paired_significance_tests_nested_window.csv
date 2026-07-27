@@ -1,2 +1,0 @@
-comparison,n,attention_accuracy,cnnlstm_accuracy,delta_accuracy,attention_f1,cnnlstm_f1,delta_f1,mcnemar_b,mcnemar_c,mcnemar_exact_p,bootstrap_delta_acc_ci_low,bootstrap_delta_acc_ci_high,bootstrap_delta_acc_p,bootstrap_delta_f1_ci_low,bootstrap_delta_f1_ci_high,bootstrap_delta_f1_p
-AttentionNet_nested_window vs CNNLSTM_nested_window,57,0.7719298245614035,0.8245614035087719,-0.052631578947368474,0.7636363636363637,0.8214285714285714,-0.05779220779220773,4,7,0.548828125,-0.1578947368421053,0.052631578947368474,0.448,-0.1648351648351648,0.04168734491315129,0.2856
