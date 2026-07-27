@@ -1,2 +1,0 @@
-Experiment,Accuracy,Accuracy_CI_Low,Accuracy_CI_High,F1_Score,F1_CI_Low,F1_CI_High
-Ablation_Only_Trial_Intercept,73.68%,63.16%,84.21%,73.68%,59.56%,85.19%
