@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "protocol": "nested_window_selection_strict_fold_seed_v1",
+  "model": "CNNLSTM",
+  "config": "Full_Preprocessing",
+  "global_seed": 43,
+  "n_participants": 57,
+  "accuracy": 0.7894736842105263,
+  "f1": 0.7857142857142857,
+  "contract_hash": "fb263afeaeeaf2ba154162d0a0afa6b3ea764f2cd2b9728364c6856a5414760b",
+  "predictions_sha256": "32f5d398601e1e23a359bc6b8c30af356f035ffe70015d55f4594f7cf8b239db",
+  "completed_at": "2026-07-31 21:47:52 +0800"
+}

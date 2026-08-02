@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "n_tasks": 20,
+  "n_outer_folds": 1140,
+  "n_candidate_trainings": 4560,
+  "n_participants": 57,
+  "n_asd": 27,
+  "n_td": 30,
+  "global_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "independent_unit": "participant",
+  "pipeline_seeds_are_repeated_computational_runs": true,
+  "no_best_seed_selection": true,
+  "all_20_tasks_complete": true,
+  "all_candidates_usable": true,
+  "cross_task_split_and_candidate_seed_mismatches": 0,
+  "candidate_windows_ms": [
+    [
+      2000,
+      1000
+    ],
+    [
+      1500,
+      750
+    ],
+    [
+      1000,
+      500
+    ],
+    [
+      2000,
+      500
+    ]
+  ],
+  "bootstrap": {
+    "iterations": 20000,
+    "seed": 20260801,
+    "scheme": "crossed resampling of pipeline seeds and participants",
+    "primary_interval": "two-sided percentile 95% CI",
+    "model_family_interval": "Bonferroni simultaneous 98.333% CI for three pairwise comparisons"
+  },
+  "interpretation_rule": "A numerical difference is not described as statistically supported when its uncertainty interval includes zero."
+}

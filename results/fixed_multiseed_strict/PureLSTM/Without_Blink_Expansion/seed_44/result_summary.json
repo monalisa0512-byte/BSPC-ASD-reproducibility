@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "model": "PureLSTM",
+  "config": "Without_Blink_Expansion",
+  "global_seed": 44,
+  "n_participants": 57,
+  "accuracy": 0.7543859649122807,
+  "f1": 0.7586206896551724,
+  "contract_hash": "be741430c31fbc799ac4773365fb45439d0fdeb1138a548149d1455b3fe05f76",
+  "predictions_sha256": "2d961b2e845c7b2439e7ce1136ae9f72dfb247e1f05856f57faed9b522b779db",
+  "completed_at": "2026-07-31 05:42:36 +0800"
+}

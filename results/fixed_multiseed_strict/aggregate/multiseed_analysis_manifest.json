@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "independent_unit": "participant",
+  "n_participants": 57,
+  "n_asd": 27,
+  "n_td": 30,
+  "global_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "n_tasks": 75,
+  "fold_seed_reset": true,
+  "cross_condition_split_mismatches": [],
+  "bootstrap": {
+    "iterations": 10000,
+    "seed": 20260730,
+    "scheme": "crossed resampling of global seeds and participants"
+  },
+  "model_comparisons": "All three pairwise model comparisons under Full Preprocessing",
+  "interpretation": "Global seeds are repeated computational runs, not additional independent participants. No best-seed selection is performed."
+}

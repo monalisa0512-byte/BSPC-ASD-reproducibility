@@ -1,0 +1,2 @@
+﻿status,model,config,global_seed,n_participants,accuracy,f1,contract_hash,predictions_sha256,completed_at
+complete,AttentionNet,Full_Preprocessing,43,57,0.7894736842105263,0.7857142857142857,3941dc4469516940f09d2d9ddc1a52aae1a8e66c7dbdbfc32f3f92a75bb9bb0e,fe804b637a5cb350eb53550e8b616490b3a57025c46135941d83adf5796c3db0,2026-07-31 00:37:36 +0800

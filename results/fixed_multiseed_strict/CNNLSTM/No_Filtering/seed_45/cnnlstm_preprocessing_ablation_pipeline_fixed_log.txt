@@ -1,0 +1,11 @@
+
+============================================================
+开始时间: 2026-07-31 06:16:33
+============================================================
+
+定义了 5 个消融实验配置:
+  - Full_Preprocessing
+  - Linear_Interpolation
+  - Without_Blink_Expansion
+  - No_Filtering
+  - Without_Mask_Features

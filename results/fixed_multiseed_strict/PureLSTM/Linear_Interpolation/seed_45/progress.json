@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "task_key": "PureLSTM__Linear_Interpolation__seed_45",
+  "model": "PureLSTM",
+  "config": "Linear_Interpolation",
+  "global_seed": 45,
+  "pid": 32724,
+  "hostname": "autodl-container-5cd04dabc9-79850406",
+  "contract_hash": "d376f7d6eadc3501b2535e72d7e5529e639384cbe8aafa98eedf491450a1ba40",
+  "total_folds": 57,
+  "max_epochs": 50,
+  "started_at": "2026-07-31 06:58:55 +0800",
+  "status": "complete",
+  "stage": "complete",
+  "completed_folds": 57,
+  "current_fold": null,
+  "current_epoch": 0,
+  "result": {
+    "status": "complete",
+    "model": "PureLSTM",
+    "config": "Linear_Interpolation",
+    "global_seed": 45,
+    "n_participants": 57,
+    "accuracy": 0.7368421052631579,
+    "f1": 0.7272727272727273,
+    "contract_hash": "d376f7d6eadc3501b2535e72d7e5529e639384cbe8aafa98eedf491450a1ba40",
+    "predictions_sha256": "48b758d4c2c01df5a6a099b400844af756d47fa19a190cc7dcdef40cfe93f66e",
+    "completed_at": "2026-07-31 08:05:48 +0800"
+  },
+  "updated_at": "2026-07-31 08:05:48 +0800"
+}

@@ -1,0 +1,2 @@
+﻿status,model,config,global_seed,n_participants,accuracy,f1,contract_hash,predictions_sha256,completed_at
+complete,CNNLSTM,Without_Mask_Features,45,57,0.8070175438596491,0.7843137254901961,329f930577db2219cffe6497c149f46dc9bbe38fc0446b8e3bd4478ec8cab7c5,875444bf5d8fe98d9e4684b0cbe07e0f21def67d621a19d0322924447e493202,2026-07-31 07:39:47 +0800

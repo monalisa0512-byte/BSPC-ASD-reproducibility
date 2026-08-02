@@ -1,0 +1,2 @@
+﻿status,protocol,model,config,global_seed,n_participants,accuracy,f1,contract_hash,predictions_sha256,completed_at
+complete,nested_window_selection_strict_fold_seed_v1,PureLSTM,Full_Preprocessing,46,57,0.7894736842105263,0.7857142857142857,3e41fe0c0c7743556d60b694b2ec4e5a1947fc51d05adf43e299b559444a03f6,b6f19529140e1add3682dc71fdeaba65d794dca4032aca2efc98105815510631,2026-08-01 04:18:13 +0800

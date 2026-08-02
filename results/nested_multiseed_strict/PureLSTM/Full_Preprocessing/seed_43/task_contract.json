@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "protocol": "nested_window_selection_strict_fold_seed_v1",
+  "model": "PureLSTM",
+  "config": "Full_Preprocessing",
+  "global_seed": 43,
+  "outer_fold_seed_scheme": "global_seed_times_100000_plus_one_based_fold_id_v1",
+  "candidate_seed_scheme": "fold_seed_times_10_plus_one_based_candidate_index_v1",
+  "candidates_ms": [
+    [
+      2000,
+      1000
+    ],
+    [
+      1500,
+      750
+    ],
+    [
+      1000,
+      500
+    ],
+    [
+      2000,
+      500
+    ]
+  ],
+  "selection_score": [
+    "validation_youden_j",
+    "validation_f1",
+    "validation_accuracy",
+    "negative_window_ms",
+    "negative_stride_ms"
+  ],
+  "window_selection_uses_outer_test": false,
+  "standardization_uses_outer_test": false,
+  "window_size_fixed_reference_ms": [
+    1000,
+    500
+  ],
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "early_stopping_patience": 12,
+  "participant_validation_fraction": 0.15,
+  "preprocessing": {
+    "pre_ms": 80,
+    "post_ms": 160,
+    "impute_method": "pchip",
+    "use_mask_features": true,
+    "trial_intercept": true,
+    "window_intercept": true,
+    "max_trial_missing_rate": 0.8,
+    "max_missing_rate": 0.6,
+    "max_continuous_frames": 60
+  },
+  "same_condition_train_validation_test": true,
+  "random_processes_reset": [
+    "Python random",
+    "NumPy",
+    "PyTorch CPU/CUDA",
+    "outer train/validation participant split",
+    "candidate-specific model initialization",
+    "candidate-specific sampler and mini-batch order",
+    "dropout and optimization trajectory",
+    "candidate-specific AMP GradScaler"
+  ],
+  "runner_source": "/root/autodl-tmp/BSPC_nested_ablation/BSPC_reproducibility_package/experiments/run_nested_multiseed_fold_strict.py",
+  "runner_sha256": "d01727c11749d8a6869c76b7742c76fd9817bc5495d2f4e32b63e95dd5beab9a",
+  "model_source": "/root/autodl-tmp/BSPC_nested_ablation/BSPC_reproducibility_package/experiments/run_purelstm_preprocessing_ablation_pipeline_fixed.py",
+  "model_source_sha256": "0d913e67b08de0b31369e9dbb16eba055d5cee87304109e0f3ed6c799ba8e24c",
+  "contract_hash": "dc48fa3314b4ca236cac6b494a401b0602322c687ba3ec0607471f66eb8aee9c"
+}

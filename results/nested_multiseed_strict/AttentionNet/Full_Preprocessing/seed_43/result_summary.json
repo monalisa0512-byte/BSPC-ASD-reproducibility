@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "protocol": "nested_window_selection_strict_fold_seed_v1",
+  "model": "AttentionNet",
+  "config": "Full_Preprocessing",
+  "global_seed": 43,
+  "n_participants": 57,
+  "accuracy": 0.7192982456140351,
+  "f1": 0.7333333333333333,
+  "contract_hash": "27325f053cc212463b1ad9ee4130bc84103e12e19b3aad230adb7fdf4bc18b65",
+  "predictions_sha256": "0a51e03c18c55928fe220848f88e514e8d0f9ed85e534cfef3c1dbc11b09568f",
+  "completed_at": "2026-07-31 18:18:36 +0800"
+}

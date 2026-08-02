@@ -1,5 +1,4 @@
 import os
-from common_paths import DATA_DIR as DEFAULT_DATA_DIR
 import glob
 import numpy as np
 import pandas as pd
@@ -21,6 +20,7 @@ from collections import Counter
 import json
 import sys
 import time
+import random
 
 warnings.filterwarnings("ignore")
 
@@ -38,8 +38,14 @@ print("="*60)
 # =========================
 # 1. 全局配置
 # =========================
-DATA_FOLDER = str(DEFAULT_DATA_DIR)
-RESULTS_FOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "results", "cnnlstm_preprocessing_ablation_pipeline_fixed"))
+DATA_FOLDER = os.environ.get(
+    "BSPC_DATA_DIR",
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "eyesdata_processed_57")),
+)
+RESULTS_FOLDER = os.environ.get(
+    "BSPC_FIXED_RESULTS_FOLDER",
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "results", "cnnlstm_preprocessing_ablation_pipeline_fixed")),
+)
 os.makedirs(RESULTS_FOLDER, exist_ok=True)
 
 # 设置日志文件
@@ -60,6 +66,7 @@ STRIDE = 500
 BATCH_SIZE = 32
 LR = 0.001
 EPOCHS = 50
+MAX_FOLDS = None
 
 # Ultimate标准参数（测试集锁定）
 ULTIMATE_MAX_TRIAL_MISSING_RATE = 0.80
@@ -80,10 +87,17 @@ BASE_FEATURES = [
 MASK_FEATURES = [col + "_Mask" for col in BASE_FEATURES]
 PID_COL, Y_COL, TIME_COL, TRIAL_COL = "Participant", "Class", "RecordingTime [ms]", "Stimulus"
 
-torch.manual_seed(SEED)
-np.random.seed(SEED)
-if torch.cuda.is_available():
-    torch.cuda.manual_seed(SEED)
+def seed_everything(seed):
+    """Reset all process-level RNGs so every ablation starts identically."""
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+
+
+seed_everything(SEED)
 
 # =========================
 # 2. 消融实验配置类
@@ -331,7 +345,7 @@ def create_dataset_from_full_data(full_df, train_pids, test_pid, config, scaler=
         X_test_final = X_test_base_scaled
     return X_train_final, Y_train_arr, P_train_arr, X_test_final, Y_test_arr, scaler
 
-def extract_single_pid_data(full_df, target_pid, scaler, use_mask):
+def extract_single_pid_data(full_df, target_pid, scaler, config):
     grouped = full_df.groupby(PID_COL)
     X_pid, Y_pid = [], []
     for pid, group in grouped:
@@ -352,7 +366,7 @@ def extract_single_pid_data(full_df, target_pid, scaler, use_mask):
                 severe_missing = (frame_missing_rate >= 0.5).astype(int)
                 missing_rate = severe_missing.mean()
                 max_continuous = get_max_continuous_missing(severe_missing)
-                if missing_rate <= ULTIMATE_MAX_MISSING_RATE and max_continuous <= ULTIMATE_MAX_CONTINUOUS_FRAMES:
+                if missing_rate <= config.max_missing_rate and max_continuous <= config.max_continuous_frames:
                     X_pid.append(current_win)
                     Y_pid.append(label)
     if not X_pid: return None, None
@@ -364,7 +378,7 @@ def extract_single_pid_data(full_df, target_pid, scaler, use_mask):
     if len(X_pid_arr) == 0: return None, None
     N, T, F_total = X_pid_arr.shape
     X_pid_base_scaled = scaler.transform(X_pid_arr[:, :, :7].reshape(-1, 7)).reshape(N, T, 7)
-    if use_mask:
+    if config.use_mask_features:
         X_pid_mask = X_pid_arr[:, :, 7:]
         X_pid_final = np.concatenate([X_pid_base_scaled, X_pid_mask], axis=2)
     else:
@@ -431,6 +445,7 @@ def get_stratified_train_val_pids(pool_pids, pool_labels, test_size=0.15, random
 # 5. 消融实验运行函数
 # =========================
 def run_single_ablation(config, full_df_train, full_df_test, pid_to_label):
+    seed_everything(SEED)
     log_print(f"\n{'='*60}")
     log_print(f"🧪 开始实验: {config.name}")
     log_print(f"{'='*60}")
@@ -439,6 +454,8 @@ def run_single_ablation(config, full_df_train, full_df_test, pid_to_label):
     subject_rows = []
     scaler_amp = torch.cuda.amp.GradScaler()
     for i, test_pid in enumerate(all_pids):
+        if MAX_FOLDS is not None and i >= MAX_FOLDS:
+            break
         pool_pids = [p for p in all_pids if p != test_pid]
         pool_labels = [pid_to_label[p] for p in pool_pids]
         real_train_pids, val_pids = get_stratified_train_val_pids(pool_pids, pool_labels, test_size=0.15, random_state=SEED + i)
@@ -450,7 +467,7 @@ def run_single_ablation(config, full_df_train, full_df_test, pid_to_label):
             log_print(f"  [Fold {i+1}] 测试集为空，跳过"); continue
         X_val_list = []
         for v_pid in val_pids:
-            x_v, y_v = extract_single_pid_data(full_df_train, v_pid, scaler, config.use_mask_features)
+            x_v, y_v = extract_single_pid_data(full_df_train, v_pid, scaler, config)
             if x_v is not None and len(x_v) > 0:
                 X_val_list.append((torch.tensor(x_v, dtype=torch.float32).to(DEVICE), int(np.round(np.mean(y_v)))))
         if len(X_val_list) == 0:
@@ -548,7 +565,10 @@ def run_single_ablation(config, full_df_train, full_df_test, pid_to_label):
 
     # 保存混淆矩阵
     fig, ax = plt.subplots(figsize=(8, 6))
-    ConfusionMatrixDisplay.from_predictions(y_true_all, y_pred_all, display_labels=["TD", "ASD"], cmap=plt.cm.Blues, ax=ax)
+    ConfusionMatrixDisplay.from_predictions(
+        y_true_all, y_pred_all, labels=[0, 1],
+        display_labels=["TD", "ASD"], cmap=plt.cm.Blues, ax=ax
+    )
     ax.set_title(f"{config.name} (Acc: {final_acc*100:.1f}%)")
     cm_path = os.path.join(RESULTS_FOLDER, f"CM_{config.name}.png")
     plt.savefig(cm_path, dpi=300, bbox_inches='tight')

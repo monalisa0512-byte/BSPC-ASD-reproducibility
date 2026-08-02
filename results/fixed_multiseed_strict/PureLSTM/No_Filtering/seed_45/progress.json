@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "task_key": "PureLSTM__No_Filtering__seed_45",
+  "model": "PureLSTM",
+  "config": "No_Filtering",
+  "global_seed": 45,
+  "pid": 33354,
+  "hostname": "autodl-container-5cd04dabc9-79850406",
+  "contract_hash": "03c608837db19d17a50d9ef84d43e9e7edbe3c9c4af70ae8bb95ac1db20e0d55",
+  "total_folds": 57,
+  "max_epochs": 50,
+  "started_at": "2026-07-31 07:08:12 +0800",
+  "status": "complete",
+  "stage": "complete",
+  "completed_folds": 57,
+  "current_fold": null,
+  "current_epoch": 0,
+  "result": {
+    "status": "complete",
+    "model": "PureLSTM",
+    "config": "No_Filtering",
+    "global_seed": 45,
+    "n_participants": 57,
+    "accuracy": 0.7719298245614035,
+    "f1": 0.7719298245614035,
+    "contract_hash": "03c608837db19d17a50d9ef84d43e9e7edbe3c9c4af70ae8bb95ac1db20e0d55",
+    "predictions_sha256": "1f47236e39362f0d6472b12a7f2f3482f6285f2d37dd6c65417062439398c946",
+    "completed_at": "2026-07-31 08:49:51 +0800"
+  },
+  "updated_at": "2026-07-31 08:49:51 +0800"
+}

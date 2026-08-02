@@ -1,9 +1,0 @@
-metric,value
-selected_candidate_accuracy,0.8070175438596491
-selected_candidate_f1,0.8070175438596491
-oracle_candidate_correct_rate,0.8947368421052632
-selection_regret_rate,0.08771929824561403
-fixed_1000_500_candidate_accuracy,0.8070175438596491
-fixed_1000_500_candidate_f1,0.8
-folds_where_selected_wrong_but_other_candidate_correct,5.0
-folds_where_1000_500_correct_but_not_selected,7.0

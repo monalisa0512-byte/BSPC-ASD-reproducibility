@@ -1,0 +1,2 @@
+﻿status,model,config,global_seed,n_participants,accuracy,f1,contract_hash,predictions_sha256,completed_at
+complete,PureLSTM,Without_Mask_Features,42,57,0.7192982456140351,0.7037037037037037,6569785e3d2e7f77cbf037ea3342e46139e7f83686331814e83f76c460a94b0e,9e185ad1d72265309a9c768b6efc182a69f29ddd7a13a896d73164ff02997c73,2026-07-31 00:09:20 +0800

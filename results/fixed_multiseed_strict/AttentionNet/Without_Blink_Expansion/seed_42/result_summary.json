@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "model": "AttentionNet",
+  "config": "Without_Blink_Expansion",
+  "global_seed": 42,
+  "n_participants": 57,
+  "accuracy": 0.7192982456140351,
+  "f1": 0.7241379310344828,
+  "contract_hash": "0e331d5b6704926079db839e86956942f8c1c824d3876d0919d2adad8f270459",
+  "predictions_sha256": "82276e03bc199600809c4679e249f7ce197582d822a216672ba65a016eaf29e9",
+  "completed_at": "2026-07-30 23:01:26 +0800"
+}

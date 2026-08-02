@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "model": "PureLSTM",
+  "config": "Without_Mask_Features",
+  "global_seed": 42,
+  "fold_seed_scheme": "global_seed_times_100000_plus_one_based_fold_id_v1",
+  "fold_seed_examples": {
+    "fold_1": 4200001,
+    "fold_57": 4200057
+  },
+  "window_ms": 1000,
+  "stride_ms": 500,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "early_stopping_patience": 12,
+  "participant_validation_fraction": 0.15,
+  "participant_order": "sorted_pid_ascending",
+  "same_condition_for_train_validation_test": true,
+  "preprocessing": {
+    "pre_ms": 80,
+    "post_ms": 160,
+    "impute_method": "pchip",
+    "use_mask_features": false,
+    "trial_intercept": true,
+    "window_intercept": true,
+    "max_trial_missing_rate": 0.8,
+    "max_missing_rate": 0.6,
+    "max_continuous_frames": 60
+  },
+  "random_processes_reset_each_fold": [
+    "Python random",
+    "NumPy",
+    "PyTorch CPU",
+    "PyTorch CUDA all devices",
+    "participant-level train/validation split",
+    "weighted sampler",
+    "mini-batch order",
+    "weight initialization",
+    "dropout",
+    "optimization trajectory",
+    "AMP gradient scaler"
+  ],
+  "determinism": {
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "torch_deterministic_algorithms": true,
+    "cublas_workspace_config": ":4096:8"
+  },
+  "runner_source": "/root/autodl-tmp/BSPC_nested_ablation/BSPC_reproducibility_package/experiments/run_fixed_multiseed_fold_strict.py",
+  "runner_sha256": "cf7966b6cd5f3bdd39a238bae19bc254fb2bef81739d741b94393e502b08c46c",
+  "model_source": "/root/autodl-tmp/BSPC_nested_ablation/BSPC_reproducibility_package/experiments/run_purelstm_preprocessing_ablation_pipeline_fixed.py",
+  "model_source_sha256": "0d913e67b08de0b31369e9dbb16eba055d5cee87304109e0f3ed6c799ba8e24c",
+  "contract_hash": "6569785e3d2e7f77cbf037ea3342e46139e7f83686331814e83f76c460a94b0e"
+}

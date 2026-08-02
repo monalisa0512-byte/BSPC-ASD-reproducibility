@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "task_key": "CNNLSTM__Linear_Interpolation__seed_42",
+  "model": "CNNLSTM",
+  "config": "Linear_Interpolation",
+  "global_seed": 42,
+  "pid": 6999,
+  "hostname": "autodl-container-5cd04dabc9-79850406",
+  "contract_hash": "d45e8fd67a5089c9c055ceb1dd990b638a0362cbd8ad1c5a35dbdc5c11bbc7d6",
+  "total_folds": 57,
+  "max_epochs": 50,
+  "started_at": "2026-07-30 21:15:11 +0800",
+  "status": "complete",
+  "stage": "complete",
+  "completed_folds": 57,
+  "current_fold": null,
+  "current_epoch": 0,
+  "result": {
+    "status": "complete",
+    "model": "CNNLSTM",
+    "config": "Linear_Interpolation",
+    "global_seed": 42,
+    "n_participants": 57,
+    "accuracy": 0.7368421052631579,
+    "f1": 0.7368421052631579,
+    "contract_hash": "d45e8fd67a5089c9c055ceb1dd990b638a0362cbd8ad1c5a35dbdc5c11bbc7d6",
+    "predictions_sha256": "e4011546fadb23af7c9ba0aba0bae2e5db0231868b4e856379908894037c3413",
+    "completed_at": "2026-07-30 22:34:40 +0800"
+  },
+  "updated_at": "2026-07-30 22:34:40 +0800"
+}

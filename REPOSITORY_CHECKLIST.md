@@ -1,12 +1,11 @@
-# Repository deposition checklist
+# Review-release checklist
 
-- [ ] Choose and add an author-approved software licence (MIT, BSD-3-Clause, Apache-2.0, or an institution-approved alternative).
-- [ ] Confirm that the Figshare dataset licence permits the documented download and processing workflow.
-- [x] Run `python smoke_check.py` in the prepared release environment.
-- [ ] Test one short CPU smoke run and one full GPU entry point from repository-relative paths.
-- [x] Confirm that no raw participant data, credentials, absolute paths, private logs, manuscripts, or reviewer documents are present.
-- [x] Create the private GitHub repository and push this directory only.
-- [ ] Create release `v1.0.0-review` (or the final chosen version).
-- [ ] Connect the GitHub repository to Zenodo and archive the release.
-- [ ] Test the Zenodo DOI and, if review is confidential, the private reviewer link outside the author account.
-- [ ] Replace `[AUTHOR INPUT NEEDED: repository DOI/URL]` in the manuscript and response letter.
+- [x] Strict fixed-window scripts and five-seed archived outputs included.
+- [x] Strict nested-window scripts and five-seed archived outputs included.
+- [x] Fold-level seed reset, candidate seed, tie handling, and leakage controls documented.
+- [x] Participant-level predictions, fold metadata, aggregate tables, and figure source data included.
+- [x] README values match the revised manuscript evidence lock.
+- [x] Portable path defaults and structural smoke check included.
+- [ ] Confirm the private GitHub reviewer-access workflow.
+- [ ] Choose a software licence before public release.
+- [ ] Create a public tagged release and archive it after acceptance if desired.

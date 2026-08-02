@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "task_key": "CNNLSTM__Without_Blink_Expansion__seed_43",
+  "model": "CNNLSTM",
+  "config": "Without_Blink_Expansion",
+  "global_seed": 43,
+  "pid": 16561,
+  "hostname": "autodl-container-5cd04dabc9-79850406",
+  "contract_hash": "7510f3cd1c15c7e2b097a98ea2c0d7bf5110e5c10d3a47817843381771584d49",
+  "total_folds": 57,
+  "max_epochs": 50,
+  "started_at": "2026-07-31 00:36:49 +0800",
+  "status": "complete",
+  "stage": "complete",
+  "completed_folds": 57,
+  "current_fold": null,
+  "current_epoch": 0,
+  "result": {
+    "status": "complete",
+    "model": "CNNLSTM",
+    "config": "Without_Blink_Expansion",
+    "global_seed": 43,
+    "n_participants": 57,
+    "accuracy": 0.7192982456140351,
+    "f1": 0.7142857142857143,
+    "contract_hash": "7510f3cd1c15c7e2b097a98ea2c0d7bf5110e5c10d3a47817843381771584d49",
+    "predictions_sha256": "900e0aaa073439d60afc7115fb3ccf87bfb8d1c6adff48fae01ae29cdb74b25d",
+    "completed_at": "2026-07-31 02:09:14 +0800"
+  },
+  "updated_at": "2026-07-31 02:09:14 +0800"
+}

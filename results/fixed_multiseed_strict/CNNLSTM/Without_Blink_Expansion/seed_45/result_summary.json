@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "model": "CNNLSTM",
+  "config": "Without_Blink_Expansion",
+  "global_seed": 45,
+  "n_participants": 57,
+  "accuracy": 0.7368421052631579,
+  "f1": 0.6938775510204082,
+  "contract_hash": "4fa98393a051524c7ecc9c8e3ff85db542194f8c08d74e352a5a966a7a3636b5",
+  "predictions_sha256": "25af97678205982466eddd9d5466c97527a4c2fbf37213a855244af9e6981b51",
+  "completed_at": "2026-07-31 07:44:44 +0800"
+}

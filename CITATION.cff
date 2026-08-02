@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this code or the archived result files, please cite the associated manuscript and software release."
-title: "BSPC eye-tracking ASD classification reproducibility package"
+title: "BSPC eye-tracking ASD protocol-sensitivity reproducibility package"
 type: software
-version: "1.0.0-review"
-date-released: 2026-07-27
+version: "1.0.0-review-final-v4"
+date-released: 2026-08-02
 repository-code: "https://github.com/monalisa0512-byte/BSPC-ASD-reproducibility"
 url: "https://github.com/monalisa0512-byte/BSPC-ASD-reproducibility"
 authors:

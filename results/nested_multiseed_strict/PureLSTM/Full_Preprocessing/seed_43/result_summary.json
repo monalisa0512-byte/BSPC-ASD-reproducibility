@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "protocol": "nested_window_selection_strict_fold_seed_v1",
+  "model": "PureLSTM",
+  "config": "Full_Preprocessing",
+  "global_seed": 43,
+  "n_participants": 57,
+  "accuracy": 0.7894736842105263,
+  "f1": 0.7857142857142857,
+  "contract_hash": "dc48fa3314b4ca236cac6b494a401b0602322c687ba3ec0607471f66eb8aee9c",
+  "predictions_sha256": "606d0122e075305ca7d241fd8ad61020146f091eaae65f47ca74b737748595a5",
+  "completed_at": "2026-08-01 01:28:55 +0800"
+}

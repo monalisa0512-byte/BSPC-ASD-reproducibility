@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "task_key": "AttentionNet__No_Filtering__seed_44",
+  "model": "AttentionNet",
+  "config": "No_Filtering",
+  "global_seed": 44,
+  "pid": 21634,
+  "hostname": "autodl-container-5cd04dabc9-79850406",
+  "contract_hash": "6793e6875ba76030ca95b4ce7874973b175186869b726488d40c4ee56a55f32f",
+  "total_folds": 57,
+  "max_epochs": 50,
+  "started_at": "2026-07-31 02:32:22 +0800",
+  "status": "complete",
+  "stage": "complete",
+  "completed_folds": 57,
+  "current_fold": null,
+  "current_epoch": 0,
+  "result": {
+    "status": "complete",
+    "model": "AttentionNet",
+    "config": "No_Filtering",
+    "global_seed": 44,
+    "n_participants": 57,
+    "accuracy": 0.7368421052631579,
+    "f1": 0.7368421052631579,
+    "contract_hash": "6793e6875ba76030ca95b4ce7874973b175186869b726488d40c4ee56a55f32f",
+    "predictions_sha256": "7320a78bd9bb3ec56c3521a7a475af7917e158decd1390cc049635ba281e6f6c",
+    "completed_at": "2026-07-31 04:45:46 +0800"
+  },
+  "updated_at": "2026-07-31 04:45:46 +0800"
+}

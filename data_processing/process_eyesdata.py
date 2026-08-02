@@ -7,15 +7,15 @@ participants present in the raw recordings: PIDs 1-59 excluding 12 and 16.
 """
 import pandas as pd
 from pathlib import Path
-import argparse
 
 
 VALID_PIDS = set(range(1, 60)) - {12, 16}
 
 
-def process_eyesdata(raw_dir, output_dir):
-    raw_dir = Path(raw_dir)
-    output_dir = Path(output_dir)
+def process_eyesdata():
+    # Paths
+    raw_dir = Path("D:/development/workspace/vibecode/data/Eye-tracking Output")
+    output_dir = Path("D:/development/workspace/vibecode/data/eyesdata_processed_57")
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Load metadata
@@ -183,9 +183,4 @@ def process_eyesdata(raw_dir, output_dir):
 
 
 if __name__ == "__main__":
-    package_root = Path(__file__).resolve().parents[1]
-    parser = argparse.ArgumentParser(description="Build the verified 57-participant processed dataset.")
-    parser.add_argument("--raw-dir", type=Path, default=package_root / "data" / "raw")
-    parser.add_argument("--output-dir", type=Path, default=package_root / "data" / "eyesdata_processed_57")
-    args = parser.parse_args()
-    process_eyesdata(args.raw_dir, args.output_dir)
+    process_eyesdata()

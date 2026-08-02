@@ -1,0 +1,2 @@
+﻿status,protocol,model,config,global_seed,n_participants,accuracy,f1,contract_hash,predictions_sha256,completed_at
+complete,nested_window_selection_strict_fold_seed_v1,AttentionNet,No_Filtering,42,57,0.7017543859649122,0.7017543859649122,4607d9a7195669e573e31da3af2c78c273ea2e21835efafd6c61528c2c336480,6119fda0c4647052ed8ea62f839e8fac861b6ec69754216ac24b2c8a529c57c6,2026-08-01 07:10:22 +0800
