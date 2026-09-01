@@ -1,8 +1,68 @@
 # BSPC eye-tracking ASD protocol-sensitivity release
 
-This repository accompanies the manuscript **“Physiology-Aware Preprocessing for Eye-Tracking-Based ASD Classification: A Multi-Seed Sensitivity Analysis of Window Selection and Subject-Level Evaluation.”** The study is a methodological and reproducibility analysis of how preprocessing, model choice, training stochasticity, and the window-selection protocol affect participant-level classification estimates.
+This repository accompanies the manuscript **“Preprocessing and Protocol Sensitivity in Eye-Tracking-Based ASD Classification: A Multi-Seed Participant-Level Evaluation.”** The study is a methodological and reproducibility analysis of how preprocessing, model choice, training stochasticity, and the window-selection protocol affect participant-level classification estimates.
 
-Repository: <https://github.com/monalisa0512-byte/BSPC-ASD-reproducibility> (private during review; access is granted separately).
+Repository: <https://github.com/monalisa0512-byte/BSPC-ASD-reproducibility>.
+
+## Authors and affiliations
+
+1. **Zizheng Liu**<br>
+   School of Software, Yunnan University, Kunming, China<br>
+   E-mail: <liumiao0512@gmail.com><br>
+   ORCID: <https://orcid.org/0009-0000-9152-0228>
+
+2. **Huiyong Li**<br>
+   Research Institute for Information Technology, Kyushu University, Japan<br>
+   E-mail: <li.huiyong.194@m.kyushu-u.ac.jp><br>
+   ORCID: <https://orcid.org/0000-0001-9916-7908>
+
+3. **Na Zhao**<br>
+   School of Software, Yunnan University, Kunming, China<br>
+   E-mail: <zhaonayx@126.com><br>
+   ORCID: <https://orcid.org/0000-0002-6166-2118>
+
+4. **Wudao Yang** (corresponding author)<br>
+   CS Department, School of Mathematics and Computer Science, Yunnan Minzu University, No. 2929 Yuehua Street, Chenggong District, Kunming 650504, China<br>
+   Faculty of Computer Science & Information Technology, Universiti Malaya, Kuala Lumpur 50603, Malaysia<br>
+   E-mail: <wudaoyang@ymu.edu.cn><br>
+   ORCID: <https://orcid.org/0000-0001-8411-1450>
+
+## Citation requirement
+
+Use of this repository, including its source code, processed outputs, result tables, figures, or substantial portions thereof, must be accompanied by an appropriate citation to the following paper. This requirement also applies to derivative analyses, adaptations, benchmarks, and redistributed copies.
+
+Until the final bibliographic record and DOI are available, cite the paper as:
+
+> Z. Liu, H. Li, N. Zhao, and W. Yang, “Preprocessing and protocol sensitivity in eye-tracking-based ASD classification: A multi-seed participant-level evaluation,” *Biomedical Signal Processing and Control*, in press, 2026.
+
+BibTeX:
+
+```bibtex
+@article{liu2026_protocol_sensitivity,
+  author  = {Liu, Zizheng and Li, Huiyong and Zhao, Na and Yang, Wudao},
+  title   = {Preprocessing and Protocol Sensitivity in Eye-Tracking-Based ASD Classification: A Multi-Seed Participant-Level Evaluation},
+  journal = {Biomedical Signal Processing and Control},
+  year    = {2026},
+  note    = {In press}
+}
+```
+
+After publication, replace this provisional citation with the journal's final citation and DOI. When citing the software release separately, also include the repository URL and the release version or commit hash used.
+
+## Copyright and permitted use
+
+Copyright © 2026 Zizheng Liu, Huiyong Li, Na Zhao, and Wudao Yang. All rights reserved.
+
+The authors retain copyright in the original source code, documentation, result tables, and repository-generated figures, except for third-party materials that remain subject to their respective owners' terms. The public Cilia et al. eye-tracking dataset is not redistributed by this repository and is governed by the terms of its original Figshare record.
+
+Access to this repository does not waive the authors' copyright. Any use, reproduction, modification, redistribution, public display, or preparation of derivative work must:
+
+1. preserve this copyright notice and the author attribution;
+2. cite the accompanying paper using the citation above (or the final published citation when available);
+3. clearly identify any modifications made to the original materials; and
+4. comply with the applicable terms for all third-party data, software, and other dependencies.
+
+For questions or permissions beyond these terms, contact the corresponding author, Wudao Yang, at <wudaoyang@ymu.edu.cn>. A separate `LICENSE` file should be added to define the legally operative software licence; if it conflicts with this README, the `LICENSE` file controls.
 
 ## Evidence lock
 
@@ -144,4 +204,4 @@ results/          archived fixed and nested task records and aggregate tables
 data/             data-access instructions; raw data are not redistributed
 ```
 
-No Zenodo DOI is assigned at the review stage. A software licence, public tagged release, and archival DOI should be added before public release.
+No Zenodo DOI is assigned at the review stage. A public tagged release, a legally operative `LICENSE` file, and an archival DOI should be added to the final public release.

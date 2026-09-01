@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this code or the archived result files, please cite the associated manuscript and software release."
+message: "Use of this repository, its code, results, tables, or figures must cite the accompanying paper."
 title: "BSPC eye-tracking ASD protocol-sensitivity reproducibility package"
 type: software
 version: "1.0.0-review-final-v4"
@@ -9,13 +9,35 @@ url: "https://github.com/monalisa0512-byte/BSPC-ASD-reproducibility"
 authors:
   - family-names: Liu
     given-names: Zizheng
+    email: liumiao0512@gmail.com
     orcid: "https://orcid.org/0009-0000-9152-0228"
+    affiliation: "School of Software, Yunnan University, Kunming, China"
   - family-names: Li
     given-names: Huiyong
+    email: li.huiyong.194@m.kyushu-u.ac.jp
     orcid: "https://orcid.org/0000-0001-9916-7908"
+    affiliation: "Research Institute for Information Technology, Kyushu University, Japan"
   - family-names: Zhao
     given-names: Na
+    email: zhaonayx@126.com
     orcid: "https://orcid.org/0000-0002-6166-2118"
+    affiliation: "School of Software, Yunnan University, Kunming, China"
   - family-names: Yang
     given-names: Wudao
+    email: wudaoyang@ymu.edu.cn
     orcid: "https://orcid.org/0000-0001-8411-1450"
+    affiliation: "Yunnan Minzu University, Kunming, China; Universiti Malaya, Kuala Lumpur, Malaysia"
+preferred-citation:
+  type: article
+  title: "Preprocessing and Protocol Sensitivity in Eye-Tracking-Based ASD Classification: A Multi-Seed Participant-Level Evaluation"
+  authors:
+    - family-names: Liu
+      given-names: Zizheng
+    - family-names: Li
+      given-names: Huiyong
+    - family-names: Zhao
+      given-names: Na
+    - family-names: Yang
+      given-names: Wudao
+  journal: "Biomedical Signal Processing and Control"
+  year: 2026
