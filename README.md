@@ -31,9 +31,9 @@ Repository: <https://github.com/monalisa0512-byte/BSPC-ASD-reproducibility>.
 
 Use of this repository, including its source code, processed outputs, result tables, figures, or substantial portions thereof, must be accompanied by an appropriate citation to the following paper. This requirement also applies to derivative analyses, adaptations, benchmarks, and redistributed copies.
 
-Until the final bibliographic record and DOI are available, cite the paper as:
+Please cite the paper as:
 
-> Z. Liu, H. Li, N. Zhao, and W. Yang, “Preprocessing and protocol sensitivity in eye-tracking-based ASD classification: A multi-seed participant-level evaluation,” *Biomedical Signal Processing and Control*, in press, 2026.
+> Z. Liu, H. Li, N. Zhao, and W. Yang, “Preprocessing and protocol sensitivity in eye-tracking-based ASD classification: A multi-seed participant-level evaluation,” *Biomedical Signal Processing and Control*, Article 111380, 2026. <https://doi.org/10.1016/j.bspc.2026.111380>
 
 BibTeX:
 
@@ -43,11 +43,12 @@ BibTeX:
   title   = {Preprocessing and Protocol Sensitivity in Eye-Tracking-Based ASD Classification: A Multi-Seed Participant-Level Evaluation},
   journal = {Biomedical Signal Processing and Control},
   year    = {2026},
-  note    = {In press}
+  pages   = {111380},
+  doi     = {10.1016/j.bspc.2026.111380}
 }
 ```
 
-After publication, replace this provisional citation with the journal's final citation and DOI. When citing the software release separately, also include the repository URL and the release version or commit hash used.
+When the journal assigns the final volume and issue, add them to this citation. When citing the software release separately, also include the repository URL and the release version or commit hash used.
 
 ## Copyright and permitted use
 
